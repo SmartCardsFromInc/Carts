@@ -13,7 +13,7 @@ import s from "./button.module.scss";
 export type ButtonPropsType<T extends ElementType = "button"> = {
   variant:
     | "primary"
-    | "withIcon"
+    | "primaryWithIcon"
     | "secondary"
     | "tertiary"
     | "link-btn"
@@ -58,6 +58,7 @@ const ButtonPolymorph = <T extends ElementType = "button">(
       disabled={disabled}
       ref={ref}
     >
+      {/*<img src={logOut} alt={"logOut"} />*/}
       {children}
     </Component>
   );

@@ -17,44 +17,49 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AsLink: Story = {
-  args: {
-    variant: "primary",
-    children: "Link that looks like a button",
-    as: "a",
-  },
-};
-
 export const Primary: Story = {
   args: {
     variant: "primary",
-    children: "Primary Button",
+    children: "Button primary",
     disabled: false,
   },
 };
-
+export const PrimaryWithIcon: Story = {
+  args: {
+    variant: "primaryWithIcon",
+    children: "Button primary",
+    disabled: false,
+  },
+};
 export const Secondary: Story = {
   args: {
     variant: "secondary",
-    children: "Secondary Button",
+    children: "Button Secondary",
     disabled: false,
   },
 };
 export const Tertiary: Story = {
   args: {
     variant: "tertiary",
-    children: "Tertiary Button",
+    children: "Tertiary",
     disabled: false,
   },
 };
 export const Link: Story = {
   args: {
-    variant: "link",
-    children: "Tertiary Button",
+    as: "a",
+    variant: "link-btn",
+    children: "Link-button",
     disabled: false,
   },
 };
-
+export const SecondaryWithIcon: Story = {
+  args: {
+    variant: "secondaryWithIcon",
+    children: "Button Secondary",
+    disabled: false,
+  },
+};
 export const FullWidth: Story = {
   args: {
     variant: "primary",
