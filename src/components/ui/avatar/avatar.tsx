@@ -1,4 +1,4 @@
-import avatar from "./avatar.jpg";
+import avatar from ".//img/avatar.jpg";
 import s from "./avatar.module.scss";
 
 export const Avatar = () => {
