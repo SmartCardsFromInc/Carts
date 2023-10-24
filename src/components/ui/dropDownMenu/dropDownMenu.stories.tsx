@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import singOut from "../../../svgs/log-out-for-button.svg";
 
 import { DropdownMenuDemo } from "./dropDownMenu";
-import person from "./svgs/person-outline.svg";
+import person from "./person-outline.svg";
 
-import deleteSvg from "@/components/ui/dropDownMenu/svgs/delete.svg";
-import edit from "@/components/ui/dropDownMenu/svgs/edit.svg";
-import playSvg from "@/components/ui/dropDownMenu/svgs/play-circle-outline.svg";
+import deleteSvg from "@/components/ui/dropDownMenu/delete.svg";
+import edit from "@/components/ui/dropDownMenu/edit.svg";
+import playSvg from "@/components/ui/dropDownMenu/play-circle-outline.svg";
 
 const settingDataMenu = [
   { value: "Learn", src: playSvg, alt: "playSvg" },
