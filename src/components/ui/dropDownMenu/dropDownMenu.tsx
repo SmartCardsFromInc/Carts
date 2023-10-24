@@ -1,5 +1,3 @@
-import { DetailedHTMLProps, HTMLAttributes, useState } from "react";
-
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 import beak from "./beak container - top.svg";
@@ -29,33 +27,32 @@ export const DropdownMenuDemo: React.FC<{
             <Avatar />
           </div>
         </DropdownMenu.Trigger>
-        <div className={s.menuWrapper}>
-          <DropdownMenu.Portal>
-            <DropdownMenu.Content className={s.items} sideOffset={5}>
-              <div className={s.beak}>
-                <img src={beak} alt={"beak"} />
-              </div>
-              {personData && (
-                <DropdownMenu.Item disabled className={s.personDataBlock}>
-                  <Avatar />
-                  <div className={s.dataBlock}>
-                    <div className={s.name}>{personData.name}</div>
-                    <div className={s.email}>{personData.email}</div>
-                  </div>
-                </DropdownMenu.Item>
-              )}
 
-              {items.map((el: Props, index) => {
-                return (
-                  <DropdownMenu.Item key={index} className={s.item}>
-                    <img src={el.src} alt={el.alt} />
-                    <div>{el.value} </div>
-                  </DropdownMenu.Item>
-                );
-              })}
-            </DropdownMenu.Content>
-          </DropdownMenu.Portal>
-        </div>
+        <DropdownMenu.Portal>
+          <DropdownMenu.Content className={s.items} sideOffset={5}>
+            <div className={s.beak}>
+              <img src={beak} alt={"beak"} />
+            </div>
+            {personData && (
+              <DropdownMenu.Item disabled className={s.personDataBlock}>
+                <Avatar />
+                <div className={s.dataBlock}>
+                  <div className={s.name}>{personData.name}</div>
+                  <div className={s.email}>{personData.email}</div>
+                </div>
+              </DropdownMenu.Item>
+            )}
+
+            {items.map((el: Props, index) => {
+              return (
+                <DropdownMenu.Item key={index} className={s.item}>
+                  <img src={el.src} alt={el.alt} />
+                  <div>{el.value} </div>
+                </DropdownMenu.Item>
+              );
+            })}
+          </DropdownMenu.Content>
+        </DropdownMenu.Portal>
       </DropdownMenu.Root>
     </div>
   );

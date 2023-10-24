@@ -4,38 +4,44 @@
   display: flex;
   justify-content: center;
 }
+
 .beak {
   position: absolute;
   right: 11px;
   top: -16px;
 }
+
 .trigger {
   width: 36px;
   height: 36px;
   border-radius: 36px;
   position: relative;
 }
-.menuWrapper {
-}
+
 .items {
   margin-top: 13px;
   background-color: var(--color-dark-700);
   border-radius: 4px;
   border: 1px solid var(--color-dark-500);
-  position: relative;
+  position: absolute;
+  transform: translatex(-90%);
+
   & :last-child {
     &:before {
       display: none;
     }
   }
 }
+
 .item {
   display: flex;
   padding: 12px;
   position: relative;
+
   img {
     margin-right: 6px;
   }
+
   &:before {
     content: "";
     display: block;
@@ -47,11 +53,13 @@
     background-color: var(--color-dark-500);
   }
 }
+
 .personDataBlock {
   display: flex;
   justify-content: start;
   padding: 12px;
   position: relative;
+
   &:before {
     content: "";
     display: block;
@@ -67,6 +75,7 @@
 .dataBlock {
   margin-left: 8px;
 }
+
 .email {
   color: var(--color-dark-100);
 }
