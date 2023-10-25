@@ -1,7 +1,6 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
-// fix
-// import beak from "./beak container - top.svg";
+import beak from "./beak-container-top.svg";
 import s from "./dropMenu.module.scss";
 
 import { Avatar } from "@/components/ui/avatar";
@@ -32,8 +31,7 @@ export const DropdownMenuDemo: React.FC<{
         <DropdownMenu.Portal>
           <DropdownMenu.Content className={s.items} sideOffset={5}>
             <div className={s.beak}>
-              {/* where src={break}? */}
-              <img src={"beak"} alt={"beak"} />
+              <img src={beak} alt={"beak"} />
             </div>
             {personData && (
               <DropdownMenu.Item disabled className={s.personDataBlock}>
