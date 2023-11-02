@@ -7,9 +7,10 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { Check } from "./check/check";
 import s from "./checkbox.module.scss";
+
 export type CheckboxProps = {
-  checked: boolean;
-  onChange: (checked: boolean) => void;
+  // checked: boolean;
+  onChange?: (checked: boolean) => void;
   disabled?: boolean;
   required?: boolean;
   label?: string;
@@ -17,7 +18,6 @@ export type CheckboxProps = {
 };
 
 export const Checkbox: FC<CheckboxProps> = ({
-  checked,
   onChange,
   disabled,
   required,
@@ -38,15 +38,16 @@ export const Checkbox: FC<CheckboxProps> = ({
         <div className={classNames.buttonWrapper}>
           <CheckboxRadix.Root
             className={classNames.root}
-            checked={checked}
+            checked={true}
             onCheckedChange={onChange}
             disabled={disabled}
             required={required}
             id={id}
           >
             <AnimatePresence initial={false}>
-              {checked && (
+              {true && (
                 <CheckboxRadix.Indicator
+                  defaultChecked={true}
                   className={classNames.indicator}
                   asChild
                   forceMount

@@ -24,5 +24,3 @@ export const Check = (allProps: IconProps) => {
     />
   );
 };
-
-export default Check;
