@@ -1,18 +1,21 @@
 import { useState } from "react";
 
-import { Meta } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import { VerticalContainer } from "../../containers/vertical";
 import { ValuePreview } from "../../previews/value-preview/index";
 
 import { Checkbox } from "./checkbox";
 
-export default {
-  title: "Components/Data Entry/Checkbox",
+const meta = {
+  title: "Components/Checkbox",
   component: Checkbox,
-} as Meta<typeof Checkbox>;
+  tags: ["autodocs"],
+} satisfies Meta<typeof Checkbox>;
 
-export const Default = {
+export default meta;
+type Story = StoryObj<typeof meta>;
+export const CheckBoxComponent = {
   render: (args) => {
     const [checked, setChecked] = useState(true);
 
